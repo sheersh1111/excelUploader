@@ -41,7 +41,6 @@ mongoose.connect(mongoURI, {
 });
 // Handle file upload
 app.post('/upload', upload.single('file'), (req, res) => {
-    console.log("yja")
     
     // console.log("data:", data)
         const workbook = XLSX.readFile(req.file.path);
